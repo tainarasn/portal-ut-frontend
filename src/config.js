@@ -13,7 +13,9 @@
 // here BEFORE the following line
 import '@plone/volto/config';
 import Numbers from 'components/Blocks/Numbers/View';
+import Cards from 'components/Blocks/Cards/View';
 import numberSVG from '@plone/volto/icons/megaphone.svg';
+import cardsIcon from '@plone/volto/icons/cards.svg';
 import sidebar from '@plone/volto/types/reducers/sidebar/sidebar';
 
 export default function applyConfig(config) {
@@ -28,6 +30,18 @@ export default function applyConfig(config) {
     icon: numberSVG,
     group: 'text',
     view: Numbers,
+    // edit: Footer,
+    restricted: false,
+    mostUsed: false,
+    sidebarTab: false,
+    blockHasOwnFocusManagement: false,
+  };
+  config.blocks.blocksConfig.cards = {
+    id: 'cards',
+    title: 'Cards',
+    icon: cardsIcon,
+    group: 'common',
+    view: Cards,
     // edit: Footer,
     restricted: false,
     mostUsed: false,

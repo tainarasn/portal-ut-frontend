@@ -35,7 +35,7 @@
 }
 
 a {
-  color: #ffbe00;
+  color: #f6a808;
 }
 @media only screen and (max-width: 768px) {
   body {
@@ -57,7 +57,7 @@ a {
   }
   .listing-item {
     padding-top: 2vw;
-    border-left: 8px solid #ffbe00;
+    border-left: 8px solid #f6a808;
     padding: 2px 0 0 15px;
     max-width: 100%;
     /* margin-bottom: 10px; */
