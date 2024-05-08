@@ -1,0 +1,76 @@
+/* Estilizando cada item da listagem */
+.listing-item {
+  padding-top: 2vw;
+  border-left: 8px solid #ffbe00;
+  padding: 2px 0 0 15px;
+  max-width: 45%;
+  /* margin-bottom: 10px; */
+}
+
+/* Estilizando o corpo de cada item da listagem */
+.listing-body {
+  margin: 0px; /* Adapte conforme necessário */
+}
+
+/* Estilizando links dentro de itens da listagem */
+.listing-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilizando título dentro de itens da listagem */
+.listing-item h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Estilizando descrição dentro de itens da listagem */
+.listing-item .description {
+  color: #666;
+}
+
+.gridBlock .block.image img {
+  height: 83%;
+  align-self: center;
+}
+
+a {
+  color: #ffbe00;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .block.align.right {
+    z-index: 2;
+  }
+  .block.maps {
+    position: relative;
+    left: -89.5vw;
+    width: 201%;
+  }
+
+  .ui.container {
+    display: flex;
+    flex-direction: column;
+  }
+  .listing-item {
+    padding-top: 2vw;
+    border-left: 8px solid #ffbe00;
+    padding: 2px 0 0 15px;
+    max-width: 100%;
+    /* margin-bottom: 10px; */
+  }
+}
+
+/* Estilos específicos para telas menores que 480px */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
