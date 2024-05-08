@@ -1,23 +1,25 @@
-import { Box, Divider } from '@mui/material';
+import { Box, Divider, useMediaQuery } from '@mui/material';
 import { FaMicroscope } from 'react-icons/fa';
 import { IoSchool } from 'react-icons/io5';
 import { MdGroups2 } from 'react-icons/md';
 
 export const CardCustom = ({ flag, title, content }) => {
+  const isMobile = useMediaQuery('(orientation: portrait)');
   return (
     <Box
       sx={{
-        borderRadius: '0 1vw',
+        borderRadius: isMobile ? '0 3vw' : '0 1vw',
         bgcolor: '#F6A808',
-        p: '0.5vw 0 0 0',
+        p: isMobile ? '2vw 0 0 0' : '0.5vw 0 0 0',
         boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+        width: isMobile ? '100%' : '',
       }}
     >
       <Box
         sx={{
-          borderRadius: '0 1vw',
+          borderRadius: isMobile ? '0 3vw' : '0 1vw',
           bgcolor: '#fff',
-          padding: '1vw',
+          padding: '5vw',
           display: 'flex',
           flexDirection: 'column',
           gap: '1vw',
@@ -26,7 +28,7 @@ export const CardCustom = ({ flag, title, content }) => {
         <h2 style={{ alignSelf: 'center' }}>{title}</h2>
         <Box
           sx={{
-            gap: '1vw',
+            gap: isMobile ? '5vw' : '1vw',
             width: '100%',
             alignItems: 'center',
             display: 'flex',
@@ -34,12 +36,27 @@ export const CardCustom = ({ flag, title, content }) => {
           }}
         >
           {flag == 'ensino' ? (
-            <IoSchool style={{ width: '3vw', height: '3vw' }} />
+            <IoSchool
+              style={{
+                width: isMobile ? '22vw' : '3vw',
+                height: isMobile ? '22vw' : '3vw',
+              }}
+            />
           ) : flag == 'pesquisa' ? (
-            <FaMicroscope style={{ width: '3vw', height: '3vw' }} />
+            <FaMicroscope
+              style={{
+                width: isMobile ? '22vw' : '3vw',
+                height: isMobile ? '22vw' : '3vw',
+              }}
+            />
           ) : (
             flag == 'extensao' && (
-              <MdGroups2 style={{ width: '3vw', height: '3vw' }} />
+              <MdGroups2
+                style={{
+                  width: isMobile ? '22vw' : '3vw',
+                  height: isMobile ? '22vw' : '3vw',
+                }}
+              />
             )
           )}
           <Divider sx={{ bgcolor: 'black', width: '10%', height: '2px' }} />
@@ -54,7 +71,7 @@ export const CardCustom = ({ flag, title, content }) => {
         >
           <p
             style={{
-              textAlign: 'start',
+              textAlign: 'justify',
               maxHeight: '13rem' /* Altura máxima em 6 linhas */,
               overflow: 'hidden' /* Oculta conteúdo excedente */,
               textOverflow:
